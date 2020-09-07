@@ -1,1 +1,1 @@
-web: hhtp-server -p $PORT
+web hhtp-server -p $PORT
