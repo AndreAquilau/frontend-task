@@ -162,7 +162,9 @@ export default class Main extends Component {
     const { tarefas, descricao } = this.state;
 
     axios({
-      baseURL: process.env.BASE_URL_ORIGIN || 'http://localhost:5000/task',
+      baseURL:
+        process.env.BASE_URL_ORIGIN ||
+        'https://api-task-backend.herokuapp.com/task',
       method: 'POST',
       data: { description: descricao, done: false },
     })
@@ -184,7 +186,9 @@ export default class Main extends Component {
 
   deleteTarefa(e, id, index) {
     axios({
-      baseURL: process.env.BASE_URL_ORIGIN || 'http://localhost:5000/task',
+      baseURL:
+        process.env.BASE_URL_ORIGIN ||
+        'https://api-task-backend.herokuapp.com/task',
       method: 'DELETE',
       params: { id },
     })
@@ -200,7 +204,9 @@ export default class Main extends Component {
 
   getTarefas() {
     axios({
-      baseURL: process.env.BASE_URL_ORIGIN || 'http://localhost:5000/task',
+      baseURL:
+        process.env.BASE_URL_ORIGIN ||
+        'https://api-task-backend.herokuapp.com/task',
       method: 'GET',
     })
       .then((res) => {
@@ -234,7 +240,9 @@ export default class Main extends Component {
     const { tarefas, descricao, updateObject } = this.state;
 
     axios({
-      baseURL: process.env.BASE_URL_ORIGIN || 'http://localhost:5000/task',
+      baseURL:
+        process.env.BASE_URL_ORIGIN ||
+        'https://api-task-backend.herokuapp.com/task',
       method: 'PUT',
       data: { description: descricao },
       params: { id: updateObject.id },
@@ -258,7 +266,9 @@ export default class Main extends Component {
     e.preventDefault();
 
     axios({
-      baseURL: process.env.BASE_URL_ORIGIN || 'http://localhost:5000/task',
+      baseURL:
+        process.env.BASE_URL_ORIGIN ||
+        'https://api-task-backend.herokuapp.com/task',
       method: 'PUT',
       data: { done: true },
       params: { id },
@@ -277,7 +287,9 @@ export default class Main extends Component {
     e.preventDefault();
 
     axios({
-      baseURL: process.env.BASE_URL_ORIGIN || 'http://localhost:5000/task',
+      baseURL:
+        process.env.BASE_URL_ORIGIN ||
+        'https://api-task-backend.herokuapp.com/task',
       method: 'PUT',
       data: { done: false },
       params: { id },
@@ -294,7 +306,9 @@ export default class Main extends Component {
 
   componentDidMount() {
     axios({
-      baseURL: process.env.BASE_URL_ORIGIN || 'http://localhost:5000/task',
+      baseURL:
+        process.env.BASE_URL_ORIGIN ||
+        'https://api-task-backend.herokuapp.com/task',
       method: 'GET',
     })
       .then((res) => {
