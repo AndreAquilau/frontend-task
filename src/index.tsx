@@ -1,14 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
 import App from './App';
+import GlobalStyle from './styles/StylesGlobal';
 import * as serviceWorker from './serviceWorker';
+import './config/env';
 
+console.log(process.env.TEST);
 ReactDOM.render(
   <React.StrictMode>
+    <GlobalStyle />
     <App />
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById('root'),
 );
 
 // If you want your app to work offline and load faster, you can change
